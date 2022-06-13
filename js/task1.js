@@ -15,21 +15,22 @@ let removeBtn = document.querySelector(".btn.btn-outline-secondary")
 form.addEventListener("click",function(event){ 
     let inputContainer = document.createElement("div")
     inputContainer.classList.add("input-group","mb-3")
+    inputContainer.innerHTML = '<input type="text" class="form-control" placeholder="Info"><div class="input-group-append"><button class="btn btn-outline-secondary" type="button" >Remove</button></div>'
     
-    let newInput = document.createElement("input")
-    newInput.classList.add("form-control","col-12")
-    newInput.setAttribute("placeholder","info")
-    inputContainer.append(newInput)
+    // let newInput = document.createElement("input")
+    // newInput.classList.add("form-control","col-12")
+    // newInput.setAttribute("placeholder","info")
+    // inputContainer.append(newInput)
 
-    let removeBtnContainer = document.createElement("div") 
-    removeBtnContainer.classList.add("input-group-append")
-    inputContainer.append(removeBtnContainer)
+    // let removeBtnContainer = document.createElement("div") 
+    // removeBtnContainer.classList.add("input-group-append")
+    // inputContainer.append(removeBtnContainer)
 
-    let newRemoveBtn = document.createElement("button")
-    newRemoveBtn.classList.add("btn","btn-outline-secondary")
-    newRemoveBtn.setAttribute("type","button")
-    newRemoveBtn.innerHTML = "Remove"
-    removeBtnContainer.append(newRemoveBtn)
+    // let newRemoveBtn = document.createElement("button")
+    // newRemoveBtn.classList.add("btn","btn-outline-secondary")
+    // newRemoveBtn.setAttribute("type","button")
+    // newRemoveBtn.innerHTML = "Remove"
+    // removeBtnContainer.append(newRemoveBtn)
     // let inputArr = document.querySelectorAll(".form-control")
     // let lastInput = inputArr[inputArr.length-1]
     
