@@ -2,7 +2,7 @@
 
 // - при кліку на remove видаляється поточне поле
 let addBtn = document.querySelector(".btn.btn-light")
-let form0 = document.querySelector(".block-inputs")
+let insideFormContainer = document.querySelector(".block-inputs")
 let form = document.querySelector("form")
 let removeBtn = document.querySelector(".btn.btn-outline-secondary")
 // addBtn.addEventListener("click",function(ev){
@@ -33,12 +33,20 @@ form.addEventListener("click",function(event){
     // removeBtnContainer.append(newRemoveBtn)
     // let inputArr = document.querySelectorAll(".form-control")
     // let lastInput = inputArr[inputArr.length-1]
+
+    // if(event.target.classList.contains("btn","btn-light") ){
+    //     insideFormContainer.append(inputContainer)
+    // }
+
+
     
-    if(event.target.textContent ==="Add"){
-        form0.append(inputContainer)
+    if(event.target.className ==="btn btn-light"){
+        console.log(event.target)
+        insideFormContainer.append(inputContainer)
     }
-    else if(event.target.textContent ==="Remove"){
-        event.target.parentElement.parentElement.remove()
+    else if(event.target.className ==="btn btn-outline-secondary"){
+        event.target.closest(".input-group.mb-3").remove()
+        
     }
     
 })
