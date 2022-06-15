@@ -15,8 +15,7 @@ let removeBtn = document.querySelector(".btn.btn-outline-secondary")
 form.addEventListener("click",function(event){ 
     let inputContainer = document.createElement("div")
     inputContainer.classList.add("input-group","mb-3")
-    inputContainer.innerHTML = '<input type="text" class="form-control" placeholder="Info"><div class="input-group-append"><button class="btn btn-outline-secondary" type="button" >Remove</button></div>'
-    
+    inputContainer.innerHTML = '<input type="text" class="form-control" placeholder="Info"><div class="input-group-append"><button class="btn btn-outline-secondary removeBtn" type="button" >Remove</button></div>'
     // let newInput = document.createElement("input")
     // newInput.classList.add("form-control","col-12")
     // newInput.setAttribute("placeholder","info")
@@ -40,11 +39,15 @@ form.addEventListener("click",function(event){
 
 
     
-    if(event.target.className ==="btn btn-light"){
+    // if(event.target.classList.contains("btn"&&"btn-light")){
+    //     console.log(event.target)
+    //     insideFormContainer.append(inputContainer)
+    // }
+    if(event.target.classList.contains("addBtn")){
         console.log(event.target)
         insideFormContainer.append(inputContainer)
     }
-    else if(event.target.className ==="btn btn-outline-secondary"){
+    else if(event.target.classList.contains("removeBtn")){
         event.target.closest(".input-group.mb-3").remove()
         
     }
