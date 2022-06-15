@@ -1,10 +1,10 @@
 // - при кліку на add створюється ще одне поле під останнім
 
 // - при кліку на remove видаляється поточне поле
-let addBtn = document.querySelector(".btn.btn-light")
+let addBtn = document.querySelector(".addBtn")
 let insideFormContainer = document.querySelector(".block-inputs")
 let form = document.querySelector("form")
-let removeBtn = document.querySelector(".btn.btn-outline-secondary")
+let removeBtn = document.querySelector("removeBtn")
 // addBtn.addEventListener("click",function(ev){
 //     console.log(ev)
 //     let newInput = document.createElement("input")
